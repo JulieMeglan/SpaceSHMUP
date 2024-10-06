@@ -59,9 +59,10 @@
     <UnityVersion>2021.3.33f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\__Scripts\Hero.cs" />
-    <Compile Include="Assets\__Scripts\Shield.cs" />
     <Compile Include="Assets\__Scripts\BoundsCheck.cs" />
+    <Compile Include="Assets\__Scripts\Shield.cs" />
+    <Compile Include="Assets\__Scripts\Hero.cs" />
+    <Compile Include="Assets\__Scripts\Enemy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\_Materials\UnlitAlpha.shader" />

@@ -345,6 +345,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/__Scripts/BoundsCheck.cs"
+"Assets/__Scripts/Enemy.cs"
 "Assets/__Scripts/Hero.cs"
 "Assets/__Scripts/Shield.cs"
 -langversion:9.0
