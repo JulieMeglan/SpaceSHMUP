@@ -347,6 +347,8 @@
 "Assets/__Scripts/BoundsCheck.cs"
 "Assets/__Scripts/Enemy.cs"
 "Assets/__Scripts/Hero.cs"
+"Assets/__Scripts/Main.cs"
+"Assets/__Scripts/ProjectileHero.cs"
 "Assets/__Scripts/Shield.cs"
 -langversion:9.0
 
