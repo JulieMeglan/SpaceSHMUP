@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     public float health = 10;
     public int score = 100; 
 
-    private BoundsCheck bndCheck;
+    protected BoundsCheck bndCheck;
 
     void Awake() {
         bndCheck = GetComponent<BoundsCheck>();
@@ -50,7 +50,7 @@ public class Enemy : MonoBehaviour
         Debug.Log("inside function) Collision with: " + otherGO.name);
 
         if (otherGO.GetComponent<ProjectileHero>() != null) {
-            Debug.Log("(inside if statement) Enemy hit by ProjectileHero");
+            // Debug.Log("(inside if statement) Enemy hit by ProjectileHero");
 
             Destroy(otherGO);
             Destroy(gameObject);
