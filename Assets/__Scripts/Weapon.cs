@@ -47,7 +47,7 @@ public class Weapon : MonoBehaviour{
     public float nextShotTime;
 
     private GameObject weaponModel;
-    private Transform ShotPointTrans;
+    private Transform shotPointTrans;
 
     void Start(){
         if (PROJECTILE_ANCHOR == null){
@@ -55,7 +55,7 @@ public class Weapon : MonoBehaviour{
             PROJECTILE_ANCHOR = go.transform;
         }
 
-        ShotPointTrans = transform.GetChild(0);
+        shotPointTrans = transform.GetChild(0);
 
         SetType(_type);
 
@@ -118,7 +118,7 @@ public class Weapon : MonoBehaviour{
         go = Instantiate<GameObject>(def.projectilePrefab, PROJECTILE_ANCHOR);
         ProjectileHero p = go.GetComponent<ProjectileHero>();
 
-        Vector3 pos = ShotPointTrans.position;
+        Vector3 pos = shotPointTrans.position;
         pos.z = 0;
         p.transform.position = pos;
 
