@@ -47,16 +47,18 @@ public class Enemy : MonoBehaviour
     //functoin below not working correctly, p. 804
     void OnCollisionEnter(Collision coll) {
         GameObject otherGO = coll.gameObject;
-        Debug.Log("inside function) Collision with: " + otherGO.name);
-
-        if (otherGO.GetComponent<ProjectileHero>() != null) {
-            // Debug.Log("(inside if statement) Enemy hit by ProjectileHero");
-
+        
+        ProjectileHero p = otherGO.GetComponent<ProjectileHero>();
+        if(p != null){
+            if (bndCheck.isOnScreen){
+                health -= Main.GET_WEAPON_DEFINITION(p.type).damageOnHit;
+                if (health <= 0){
+                    Destroy(this.gameObject);
+                }
+            }
             Destroy(otherGO);
-            Destroy(gameObject);
-        }
-        else {
-            Debug.Log("Enemy hit by non-ProjectileHero " + otherGO.name);
+        } else {
+            print("Enemy hit by non-ProjectileHero: "+ otherGO.name);
         }
     }
 }
