@@ -8,6 +8,7 @@ public class Utils : MonoBehaviour{
         int r = points.Length - 1;
         for (int c=0; c<points.Length; c++){
             vArr[r, c] = points[c]; // vArr[r, c] = vList[c]; <- vList is not defined (underlined red)
+            // above change is correct. See: https://book.prototools.net/chapter-32-space-shmup-p2-3e/
         }
 
         for (r--; r>=0; r--){
