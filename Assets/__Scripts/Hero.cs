@@ -15,6 +15,9 @@ public class Hero : MonoBehaviour
     public float projectileSpeed = 40;
     public Weapon[] weapons;
 
+    public AudioClip projectileSound;
+    private AudioSource audioSource;    
+
     [Header("Dynamic")][Range(0,4)] [SerializeField]
     private float _shieldLevel = 1;
     [Tooltip("This field holds a reference to the last triggering GameObject")]
@@ -47,6 +50,7 @@ public class Hero : MonoBehaviour
 
         if (Input.GetAxis("Jump")==1 && fireEvent != null){
             fireEvent();
+            PlayProjectileSound();
         }
     }
 
@@ -116,6 +120,18 @@ public class Hero : MonoBehaviour
     void ClearWeapons(){
         foreach (Weapon w in weapons){
             w.SetType(eWeaponType.none);
+        }
+    }
+
+    void PlayProjectileSound()
+    {
+        if (audioSource != null && projectileSound != null)
+        {
+            audioSource.PlayOneShot(projectileSound);  // Play the "projectile" sound
+        }
+        else
+        {
+            Debug.LogWarning("AudioSource or projectileSound is missing");
         }
     }
 }
