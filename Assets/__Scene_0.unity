@@ -204,7 +204,7 @@ MonoBehaviour:
   - {fileID: 1452987072}
   - {fileID: 1875261822}
   - {fileID: 1260484966}
-  projectileSound: {fileID: 8300000, guid: 755561ea4fb368542b128f19f010caf4, type: 3}
+  projectileSound: {fileID: 0}
   _shieldLevel: 1
 --- !u!114 &581322714
 MonoBehaviour:

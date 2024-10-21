@@ -34,6 +34,7 @@ public class Hero : MonoBehaviour
         }
         ClearWeapons();
         weapons[0].SetType(eWeaponType.blaster);
+        audioSource = GetComponent<AudioSource>();
     }    
 
     void Update()
@@ -125,6 +126,7 @@ public class Hero : MonoBehaviour
 
     void PlayProjectileSound()
     {
+        projectileSound = Resources.Load<AudioClip>("projectile_cut");
         if (audioSource != null && projectileSound != null)
         {
             audioSource.PlayOneShot(projectileSound);  // Play the "projectile" sound
